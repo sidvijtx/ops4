@@ -37,7 +37,7 @@ def length_of_longest_substring_n3(s):
             s1 = len(ss)
             b = 1
             for k in range(0,s1):
-                asc = ord[s1[k]]
+                asc = ord(s1[k])
                 z1[asc]+=1
                 if z1[asc] > 1 :
                     b*=0
@@ -65,7 +65,7 @@ def length_of_longest_substring_n2(s):
         z = [0] * 256
         b = 1
         for j in range(i,a):
-            asc = ord[s[j]]
+            asc = ord(s[j])
             z[asc]+=1
             if z[asc] > 1 :
                 b*=0
@@ -73,7 +73,7 @@ def length_of_longest_substring_n2(s):
         if b == 1 and c > lng :
             lng = c
             
-    pass
+    return lng
 
 
 # TODO: implement this function. You may delete this comment when you are done.
@@ -95,8 +95,8 @@ def length_of_longest_substring_n(s):
     for i in range(a):
         z = [0] * 256
         b = 1
-        for j in range(i,a):
-            asc = ord[s[j]]
+        for j in range(i,a):       
+            asc = ord(s[j])
             z[asc]+=1
             if z[asc] > 1 :
                 b*=0
@@ -107,4 +107,5 @@ def length_of_longest_substring_n(s):
             
 
     
-    pass
+    return lng
+
